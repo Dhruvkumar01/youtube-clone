@@ -1,0 +1,25 @@
+.add-new-comment{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.add-new-comment img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.add-new-comment input{
+    width: 90%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid gray;
+    background-color: transparent;
+    color: inherit;
+}
+
+.add-new-comment input:focus{
+    border-color: white;
+}

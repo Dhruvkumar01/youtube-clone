@@ -1,0 +1,11 @@
+.home-container{
+    display: flex;
+}
+
+.main{
+    background-color: #808080c7;
+    padding: 10px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

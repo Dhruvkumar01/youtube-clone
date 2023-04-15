@@ -1,0 +1,29 @@
+.hrcard-container{
+    width: 100%;
+    height: 130px;
+}
+
+.hrcard-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.hrcard-img{
+    height: 120px;
+    width: 50%;
+    object-fit: cover;
+}
+
+.hrcard-content{
+    padding: 5px 0;
+}
+
+.hrcard-title{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.hrchannel-name, .hrcard-details{
+    font-size: 13px;
+    color: gray;
+}

@@ -1,0 +1,85 @@
+.video{
+    display: flex;
+    color: white;
+}
+
+.video-main{
+    background-color: rgba(53, 50, 50);
+    padding: 10px 35px 0 35px;
+    display: flex;
+    gap: 24px;
+}
+
+.video-content{
+    flex: 5;
+    padding: 5px 0;
+}
+
+.video-wrapper{
+    margin-bottom: 10px;
+}
+
+.video-title{
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.chanel-details{
+    display: flex;
+    gap: 12px;
+    margin-right: 20px;
+}
+
+.chanel-details img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.chanel-sub{
+    margin-top: 3px;
+    font-size: 12px;
+}
+
+.chanel-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.right-btns{
+    display: flex;
+    gap: 8px;
+}
+
+.chanel-btn{
+    color: white;
+    background-color: gray;
+    border: none;
+    border-radius: 18px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.description{
+    background-color: #494343db;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.description-top{
+    display: flex;
+    gap: 10px;
+}
+
+.video-comment-info{
+    margin: 25px 0;
+    display: flex;
+    gap: 30px;
+}
+
+.recomendation{
+    flex: 2;
+}

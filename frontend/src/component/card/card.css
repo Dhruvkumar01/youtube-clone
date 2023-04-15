@@ -1,0 +1,35 @@
+.card-container{
+    width: 380px;
+    padding: 10px 0;
+    color: white;
+}
+
+.card-img{
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 6px;
+    border-radius: 20px;
+}
+
+.card-content{
+    display: flex;
+    gap: 12px;
+}
+
+.channel-img{
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.card-title{
+    margin-bottom: 5px;
+}
+
+.card-video-details{
+    display: flex;
+    gap: 15px;
+    font-size: 11px;
+}

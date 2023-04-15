@@ -1,0 +1,15 @@
+.comment-container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.comment-user-image{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.comment-user-name{
+    margin-bottom: 5px;
+}
