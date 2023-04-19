@@ -1,24 +1,45 @@
-const express = require('express')
-const mongoose= require('mongoose')
-const dotenv= require('dotenv')
-dotenv.config();
+import express from 'express'
+import mongoose from 'mongoose';
+import dotenv from 'dotenv'
+import userRouter from './router/userRouter.js';
+import authRouter from './router/authRouter.js';
+import commentRouter from './router/commentRouter.js';
+import videoRouter from './router/videoRouter.js';
+import cookieParser from 'cookie-parser';
 
 const app= express();
+dotenv.config();
 
-mongoose.connect(process.env.MONGO_DB)
+const connect= ()=> {
+    mongoose.connect(process.env.MONGO_DB)
     .then(()=> {
-        console.log("DB is connected");
+        console.log("DB is connected")
     })
     .catch(err =>{
         console.log(err);
     })
+}
 
-app.get('/', (req, res)=>{
-    res.send("hello world")
-});
+app.use(cookieParser())
+app.use(express.json())
+app.use('/api/auth', authRouter)
+app.use('/api/users', userRouter)
+app.use('/api/comments', commentRouter)
+app.use('/api/videos', videoRouter)
+
+// error handeler 
+app.use((err, req, res, next)=> {
+    const status= err.status || 500;
+    const message= err.message || "something went wrong"
+    return res.status(status).json({
+        success: false,
+        status,
+        message
+    })
+})
 
 const port= process.env.PORT;
-
 app.listen(port, ()=>{
+    connect();
     console.log(`app is conected on ${port}`);
 })
