@@ -4,3 +4,5 @@ you can find little details about how youtbe work
 youtube-clone with comment reply option or toggle mode option and trending video.
 A youtube clone where you can see you watch history with pause and delete all search histort or simply remove one video from watch history.
 
+# work to be done
+1. Add signin page for create new user.
