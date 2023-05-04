@@ -1,5 +1,6 @@
 import { createError } from "../error.js"
 import User from "../model/User.js"
+import Video from "../model/Video.js"
 
 export const getUser= async (req, res, next)=>{
     try {
@@ -42,9 +43,9 @@ export const subscribe = async (req, res, next)=>{
     try {
         if(req.params.id=== req.user.id){
             await User.findByIdAndUpdate(req.user.id, {
-                $push: {subscriber: req.body.channelId},
+                $push: {subscribedChannel: req.body.channelId},
             });
-            await User.findByIdAndUpdate(req.user.id, {
+            await User.findByIdAndUpdate(req.body.channelId, {
                 $inc: {subscriberNo: 1}
             });
             res.status(200).json("subscription succesFull")
@@ -59,8 +60,8 @@ export const subscribe = async (req, res, next)=>{
 export const unsubscribe = async (req, res, next)=>{
     try {
         if(req.params.id=== req.user.id){
-            await User.findByIdAndUpdate(req.body.channelId, {
-                $pull: {subscriber: req.params.id},
+            await User.findByIdAndUpdate(req.user.id, {
+                $pull: {subscribedChannel: req.body.channelId},
             });
             await User.findByIdAndUpdate(req.body.channelId, {
                 $inc: {subscriberNo: -1}
@@ -77,8 +78,14 @@ export const unsubscribe = async (req, res, next)=>{
 export const likeVideo = async (req, res, next)=>{
     try {
         if(req.params.id=== req.user.id){
-            
-            
+            const video= await Video.findById(req.body.videoId);
+            if(!video) return next(createError(404, "video not found"));
+            const updatedVideo= await Video.findByIdAndUpdate(req.body.videoId, {
+                    $addToSet: {likes: req.user.id},
+                    $pull: {dislike: req.user.id},
+                }
+            )
+            res.status(200).json("video like has been updated");
         } else{
             return next(createError(403, "you can like video by only own user id"));
         }
@@ -90,7 +97,13 @@ export const likeVideo = async (req, res, next)=>{
 export const dislikeVideo = async (req, res, next)=>{
     try {
         if(req.params.id=== req.user.id){
-            
+            const video= await Video.findById(req.body.videoId);
+            if(!video) return next(createError(404, "video not found"));
+            const updatedVideo= await Video.findByIdAndUpdate(req.body.videoId, {
+                $addToSet: {dislike: req.user.id},
+                $pull: {likes: req.user.id},
+            })
+            res.status(200).json("you disliked the video");
         } else{
             return next(createError(403, "you can dislike video by only own user id"));
         }

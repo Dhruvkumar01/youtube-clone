@@ -1,33 +1,29 @@
 .menu-container{
     flex: 1;
-    background-color: rgba(53, 50, 50);
     height: 100vh;
     position: sticky;
     top: 0;
 }
 
 .menu-wrapper{
-    color: white;
     padding: 15px 22px;
 }
 
-.logo{
-    height: 20px;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    margin-bottom: 25px;
+.menu-top{
+    margin-bottom: 40px;
 }
 
-.logo img{
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
+.menu-top-icon{
+    position: absolute;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50%;
 }
-
-.logo p{
-    font-size: 16px;
-    font-weight: 500;
+.menu-top-icon:hover{
+    background-color: rgb(167, 166, 166);
+    cursor: pointer;
 }
 
 .menu-item-container{
@@ -41,10 +37,18 @@
     padding: 5px 8px;
     margin-bottom: 2px;
     font-family: 'Roboto Mono', monospace;
-
 }
 
-.menu-item:hover{
+.menu-item-close{
+    width: fit-content;
+    padding: 5px 8px;
+}
+
+.menu-item-close .menu-icon{
+    font-size: 20px;
+}
+
+.menu-item-close:hover, .menu-item:hover{
     cursor: pointer;
     background-color: gray;
     border-radius: 10px;
@@ -61,4 +65,31 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .menu-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: rgba(87, 87, 87, 0.796);
+    }
+}
+@media only screen and (max-width: 580px) {
+    .logo p{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .menu-item-container{
+        padding-top: 30px;
+    }
+    .logo{
+        display: none;
+    }
+    .menu-wrapper{
+        padding: 10px 6px;
+    }
 }

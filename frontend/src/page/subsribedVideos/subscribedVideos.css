@@ -1,0 +1,6 @@
+.subscribe-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 100px;
+}

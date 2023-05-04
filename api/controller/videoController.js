@@ -79,7 +79,7 @@ export const randomVideos = async (req, res, next)=>{
 export const subscribedVideos = async (req, res, next)=>{
     try {
         const user= await User.findById(req.user.id);
-        const subscribedChannels= user.subscriber;
+        const subscribedChannels= user.subscribedChannel;
         const list= await Promise.all(
             subscribedChannels.map(async (channelId) =>{
                 return await Video.find({userId: channelId})

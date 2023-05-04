@@ -1,0 +1,19 @@
+.error-container{
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-wrapper{
+    width: 400px;
+    background-color: gray;
+    padding: 20px 30px;
+    border-radius: 20px;
+}
+
+.error-wrapper h2{
+    color: var(--dark-text-color-variant);
+    font-size: 18px;
+    margin-top: 20px;
+}

@@ -7,11 +7,25 @@ const commentSchema= new mongoose.Schema({
     },
     videoId:{
         type: String,
-        required: true
+    },
+    commentId:{
+        type: String
+    },
+    numberOfComments:{
+        type: Number,
+        default: 0
     },
     desc:{
         type: String,
         required: true
+    },
+    likes:{
+        type: [String],
+        default: []
+    },
+    dislikes:{
+        type: [String],
+        default: []
     }
 }, 
     {timestamps: true}

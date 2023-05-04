@@ -5,7 +5,9 @@ import userRouter from './router/userRouter.js';
 import authRouter from './router/authRouter.js';
 import commentRouter from './router/commentRouter.js';
 import videoRouter from './router/videoRouter.js';
+import historyRouter from './router/historyRouter.js';
 import cookieParser from 'cookie-parser';
+import cors from 'cors'
 
 const app= express();
 dotenv.config();
@@ -20,12 +22,17 @@ const connect= ()=> {
     })
 }
 
+app.use(cors({
+    origin: "http://localhost:3000",
+    credentials: true
+}))
 app.use(cookieParser())
 app.use(express.json())
 app.use('/api/auth', authRouter)
 app.use('/api/users', userRouter)
 app.use('/api/comments', commentRouter)
 app.use('/api/videos', videoRouter)
+app.use('/api/historys', historyRouter)
 
 // error handeler 
 app.use((err, req, res, next)=> {

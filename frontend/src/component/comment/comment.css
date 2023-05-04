@@ -1,7 +1,9 @@
 .comment-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 50px auto;
     gap: 10px;
     margin-bottom: 25px;
+    width: 100%;
 }
 
 .comment-user-image{
@@ -12,4 +14,36 @@
 
 .comment-user-name{
     margin-bottom: 5px;
+}
+
+.comment-like{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+.comment-reply{
+    margin-left: 15px;
+    padding: 5px 10px;
+}
+
+.comment-reply:hover{
+    background-color: rgb(97, 93, 93);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.comment-replies{
+    color: aqua;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+}
+
+.comment-replies:hover{
+    background-color: rgb(30, 91, 117);
+    border-radius: 25px;
 }

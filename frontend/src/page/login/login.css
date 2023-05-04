@@ -1,10 +1,4 @@
-.login-container{
-    display: flex;
-    color: white;
-}
-
 .login-main{
-    background-color: rgba(53, 50, 50);
     height: calc(100vh - 50px);
     display: flex;
     align-items: center;
@@ -15,13 +9,6 @@
     padding: 30px;
     background: gray;
     border-radius: 10px;
-}
-
-.login p{
-    border-bottom: 1px dashed #000;
-    color: rgb(222, 222, 131);
-    margin-bottom: 10px;
-    font-size: 18px;
 }
 
 .login-form{
@@ -40,28 +27,44 @@
     border: none;
     outline: none;
     border-bottom: 1px solid black;
+    font-size: 16px;
+    cursor: text;
+    scroll-behavior: smooth;
 }
 
 .login-container input, .login-form input::placeholder{
-    color: white;
+    color: inherit;
+}
+
+.password{
+    position: relative;
+}
+
+.view-password{
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: black;
 }
 
 /* form btn  */
 .fbtn{
-    background-color: transparent;
+    background-color: teal;
+    border-radius: 10px;
     border: none;
-    color: whitesmoke;
-    border-bottom: 1px solid rgb(136, 136, 235);
+    color: inherit;
+    width: 100%;
+    margin-top: 15px;
 }
 /* google btn  */
 .gbtn{
     width: 100%;
-    background-color: transparent;
+    background-color: teal;
     border: none;
-    color: whitesmoke;
+    color: inherit;
+    border-radius: 10px;
 }
 
 .fbtn:hover, .gbtn:hover{
-    background-color: rgb(90, 82, 82);
-    border-radius: 10px;
+    background-color: rgb(39, 172, 158);
 }

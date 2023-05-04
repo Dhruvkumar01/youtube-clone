@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --dark-bg: rgb(42, 41, 41);
+    --dark-bg-bold: #000000bd;
+    --light-bg: rgb(244, 240, 240);
+    --dark-text-color: black;
+    --dark-text-color-variant: rgb(48, 38, 38);
+    --light-text-color: #ffffff;
+    --light-bg-variant: #a0a0a0db;
+}

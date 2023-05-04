@@ -1,18 +1,53 @@
 .navbar-container{
     height: 50px;
-    color: white;
-    background-color: rgba(53, 50, 50);
     position: sticky;
     top: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.65);
+    z-index: 2;
 }
 
 .navbar-wrapper{
     height: 100%;
     display: flex;
     align-items: center;
+    padding-left: 40px;
+    /* justify-content: space-between; */
+}
+
+.nav-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.nav-right{
+    flex: 7;
+    display: flex;
     padding: 0 20px;
     justify-content: flex-end;
     position: relative;
+    align-items: center;
+}
+
+.logo{
+    height: 20px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-left: 45px;
+}
+
+.logo img{
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.logo p{
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .navbar-search{
@@ -34,7 +69,7 @@
     background-color: transparent;
     outline: none;
     width: 90%;
-    color: white;
+    color: inherit;
     padding: 3px 8px;
 }
 
@@ -45,5 +80,80 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.video-upload-icon{
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+.user-profile img, .user-profile-click img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1.5px solid green;
+    cursor: pointer;
+}
+
+.user-profile-click{
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    background-color: rgba(109 99 99);
+    padding: 15px 12px;
+    border-radius: 20px;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    gap: 10px;
+}
+
+.user-profile-details button{
+    margin-top: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #524b4b;
+    color: inherit;
+    width: 100%;
+}
+
+.user-profile-details button:hover, .mode-btn:hover{
+    background-color: #6e6868;
+}
+
+.mode-btn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #524b4b;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-wrapper{
+        padding: 0 10px;
+    }
+    .user-profile-click{
+        right: 15px;
+        top: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .navbar-container{
+        height: 40px;
+    }
+    .navbar-search{
+        width: 50%;
+        padding: 1px 8px;
+    }
+    .video-upload-icon{
+        margin-right: 3px;
+    }
 }
 

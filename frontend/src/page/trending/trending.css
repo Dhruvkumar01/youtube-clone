@@ -1,0 +1,21 @@
+.trending-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding: 40px;
+    padding-left: 90px;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .trending-container{
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .trending-container{
+        align-items: center;
+        padding-top: 5px;
+    }
+}

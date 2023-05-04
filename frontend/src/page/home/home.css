@@ -1,11 +1,56 @@
-.home-container{
-    display: flex;
-}
-
 .main{
-    background-color: #808080c7;
     padding: 10px 40px 0 40px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1300px) {
+    .main{
+        padding-left: 100px;
+        justify-content: center;
+        row-gap: 20px;
+        column-gap: 45px;
+    }
+}
+@media only screen and (max-width: 1150px) and (min-width: 1051px) {
+    .main{
+        column-gap: 15px;
+        padding-left: 60px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .main{
+        column-gap: 60px;
+        padding-left: 140px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .main{
+        column-gap: 40px;
+        padding-left: 90px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .main{
+        padding-left: 120px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main{
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .main{
+        padding-left: 30px;
+        padding-right: 10px;
+        row-gap: 10px;
+    }
 }

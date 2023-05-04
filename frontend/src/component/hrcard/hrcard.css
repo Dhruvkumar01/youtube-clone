@@ -6,12 +6,13 @@
 .hrcard-wrapper{
     display: flex;
     gap: 10px;
+    flex-shrink: 0;
 }
 
-.hrcard-img{
-    height: 120px;
-    width: 50%;
+.hrcard-wrapper img{
+    width: 180px;
     object-fit: cover;
+    height: 120px;
 }
 
 .hrcard-content{
@@ -26,4 +27,51 @@
 .hrchannel-name, .hrcard-details{
     font-size: 13px;
     color: gray;
+}
+
+.hrcard-details{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hrcard-wrapper img{
+        width: 160px;
+    }
+    .hrcard-title{
+        font-size: 14px;
+    }
+    .hrchannel-name, .hrcard-details{
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hrcard-container{
+        height: auto;
+    }
+    .hrcard-wrapper{
+        flex-direction: column;
+    }
+    .hrcard-wrapper img{
+        width: 180px;
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .hrcard-container{
+        display: flex;
+        width: 220px;
+        height: max-content;
+    }
+    .hrcard-wrapper{
+        flex-direction: column;
+    }
+    .hrcard-wrapper img{
+        width: 215px;
+        height: 160px;
+        border-radius: 20px;
+    }
+    
 }

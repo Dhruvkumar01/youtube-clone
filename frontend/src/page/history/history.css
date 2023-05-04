@@ -1,0 +1,101 @@
+.history-container{
+    display: grid;
+    gap: 20px;
+    padding-top: 10px;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+}
+
+.history-videos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 100px;
+}
+
+
+.history-setting{
+    position: fixed;
+    right: 0;
+    padding-right: 20px;
+}
+
+.history-setting-wrapper{
+    padding: 10px 15px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.history-setting-wrapper input{
+    outline: none;
+    border: none;
+    width: 250px;
+    padding: 5px;
+    background-color: transparent;
+    color: inherit;
+}
+
+.history-setting-input-container{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.watch-history-option{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.history-setting-option-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    width: max-content;
+}
+.history-setting-option-container:hover{
+    background-color: rgb(154 154 154);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* to do border color white on input focus  */
+
+@media only screen and (max-width: 1000px) {
+    .history-setting-wrapper input{
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .history-setting{
+        display: none;
+    }
+    .history-container{
+        grid-template-columns: 3.5fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .history-container{
+        grid-template-columns: 6fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .history-container{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .history-videos{
+        padding-left: 50px;
+    }
+}
+
